@@ -62,16 +62,11 @@
   }
 }
 
-/*
-  Fixed header offset
-  -------------------
-  The header is position: fixed.
 
-  IMPORTANT:
-  - We don't add padding to <main> because that creates a visible gap above
-    the hero section.
-  - Instead, we offset the first content section (the hero) in home.css.
-*/
-main {
+body:not(.home) main {
+  padding-top: 74px;
+}
+
+body.home main {
   padding-top: 0;
 }
