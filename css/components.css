@@ -253,32 +253,30 @@
   margin-top: 12px;
   max-width: 240px;
 
-  /* Center the icons row under the footer name line */
-  margin-left: auto;
-  margin-right: auto;
+  /* Align the icons row to the left under the footer name line */
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .footer-icon {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 6px;
 
   color: var(--color-dark-blue);
   text-decoration: none;
 }
 
+/* Medium icon size for Font Awesome */
+.footer-icon i {
+  font-size: 26px;
+  line-height: 1;
+}
+
 .footer-icon:hover {
   text-decoration: none;
   opacity: 0.85;
-}
-
-.footer-icon__svg {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer-copy-note {
