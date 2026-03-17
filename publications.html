@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications | Cascade Water Resources</title>
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ===================================== -->
+  <!-- SITE HEADER / NAVIGATION              -->
+  <!-- ===================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="presentations.html">Presentations</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================================== -->
+    <!-- PUBLICATIONS PAGE                     -->
+    <!-- ===================================== -->
+    <section class="section">
+      <div class="container">
+        <h1>Publications</h1>
+        <p class="section-intro">
+          Publications and articles focused on stormwater quality modeling, pollutant load estimation, and the measured benefits
+          of street sweeping and related maintenance practices.
+        </p>
+
+        <!-- Cards will be created here by JavaScript -->
+        <div class="three-column" id="publicationsContainer" aria-label="Publications list">
+          <!-- Cards will be inserted here -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <strong>Cascade Water Resources</strong> &nbsp;|&nbsp; Roger C. Sutherland, PE
+      </p>
+    </div>
+  </footer>
+
+  <!-- Content loader -->
+  <script src="js/content_loader.js"></script>
+
+  <script>
+    window.CWRContent.load(function () {
+      var items = window.CWRContent.getBySection("publications");
+      window.CWRContent.renderCards(document.getElementById("publicationsContainer"), items, { scrollLayout: false });
+    });
+  </script>
+
+  <script src="js/navigation.js"></script>
+</body>
+</html>
+

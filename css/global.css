@@ -1,0 +1,88 @@
+/* =====================================
+   global.css
+   Site-wide colors, typography, and base styles
+===================================== */
+
+:root {
+  /* Color palette (from AGENTS.md) */
+  --color-dark-blue: #0e2a47;
+  --color-steel-blue: #2f5d8c;
+  --color-off-white: #f4f6f8;
+
+  /* Neutral colors */
+  --color-white: #ffffff;
+  --color-text: #1b2430;
+  --color-muted-text: #51606f;
+  --color-border: #d7dde3;
+
+  /* Typography */
+  --font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  --base-font-size: 16px;
+  --line-height: 1.6;
+
+  /* Common sizes */
+  --radius: 10px;
+  --shadow: 0 6px 18px rgba(14, 42, 71, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* Prevent accidental horizontal scrolling on any screen size */
+  overflow-x: hidden;
+}
+
+html {
+  /* Helps prevent iOS overscroll from showing white behind the page */
+  background: var(--color-off-white);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background: var(--color-off-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-steel-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Simple, readable headings */
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: var(--color-dark-blue);
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+small {
+  color: var(--color-muted-text);
+}
+
+/* A simple, consistent focus style for keyboard users */
+a:focus,
+button:focus {
+  outline: 3px solid rgba(47, 93, 140, 0.35);
+  outline-offset: 2px;
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cascade Water Resources | Roger C. Sutherland, PE</title>
+
+  <!-- CSS (kept small and organized by purpose) -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ===================================== -->
+  <!-- SITE HEADER / NAVIGATION              -->
+  <!-- ===================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="presentations.html">Presentations</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================================== -->
+    <!-- HERO SECTION                          -->
+    <!-- Main landing banner                   -->
+    <!-- ===================================== -->
+    <section class="hero">
+      <div class="container">
+        <!--
+          Hero logo banner
+          - Styled to blend into the background (not a sharp "sticker" look).
+        -->
+        <div class="hero-logo-wrap" aria-hidden="true">
+          <img src="assets/logo/cwr_logo.png" alt="Cascade Water Resources" class="hero-logo" />
+        </div>
+
+        <!--
+          Simple hero blurb (no repeated site name)
+          - Keep the homepage calm and minimal.
+        -->
+        <p class="hero-blurb">
+          <strong>Urban stormwater quality modeling and watershed analysis.</strong>
+          Cascade Water Resources provides technical expertise in urban runoff modeling, pollutant load estimation, and evaluation
+          of practical stormwater management strategies.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- ABOUT SECTION                         -->
+    <!-- Short professional summary            -->
+    <!-- ===================================== -->
+    <section class="section" id="about">
+      <div class="container two-column">
+        <div>
+          <h2 class="section-title">About Roger Sutherland</h2>
+          <p class="section-intro">
+            Roger C. Sutherland is a Professional Engineer (Oregon, No. 12015) and a principal water resources engineer with
+            more than five decades of experience in watershed planning, urban hydrology, stormwater quality modeling,
+            and pollutant reduction strategies.
+          </p>
+          <p>
+            His work focuses on understanding and quantifying the processes that control urban runoff pollutant generation,
+            transport, and removal. Over the course of his career he has applied hydrologic, hydraulic, and water quality
+            modeling techniques to evaluate continuous runoff flows, sediment transport, and associated pollutant loadings
+            from urban landscapes. His analyses have supported watershed management plans, TMDL development, stormwater
+            master planning, and the design and evaluation of best management practices across North America and internationally.
+          </p>
+          <p>
+            Mr. Sutherland is the principal author of the Simplified Particulate Transport Model (SIMPTM), a stormwater quality
+            modeling framework developed to simulate long-term pollutant load generation and the effectiveness of maintenance
+            practices such as street sweeping and catch basin cleaning. The model has been applied to numerous watershed and
+            regulatory studies and was recognized by the U.S. Geological Survey in the 1990s as one of the most advanced
+            stormwater quality modeling tools available.
+          </p>
+          <p>
+            Since beginning his research at the University of Maryland in the early 1970s, he has contributed to many of the
+            foundational studies on urban runoff and nonpoint source pollution, including projects associated with the Clean
+            Water Act Section 208 planning efforts and the Nationwide Urban Runoff Program (NURP). His professional work has
+            supported municipalities, transportation agencies, and watershed authorities in evaluating practical stormwater
+            management strategies that emphasize source control and cost-effective pollutant reduction.
+          </p>
+          <p>
+            Mr. Sutherland has authored more than fifty technical publications on stormwater quality modeling and the benefits
+            of public works maintenance practices. He has presented or taught at conferences, workshops, and professional
+            training programs more than one hundred times since 1975 and has served as an instructor for numerous professional
+            development courses focused on stormwater modeling, BMP design, and urban runoff management.
+          </p>
+        </div>
+
+        <aside class="card">
+          <h3>Highlights</h3>
+          <ul>
+            <li>More than <strong>52 years</strong> of professional engineering experience in stormwater and watershed management</li>
+            <li><strong>Principal developer of the SIMPTM model</strong>, a widely used framework for estimating urban runoff pollutant loads</li>
+            <li>Contributor to early national research on urban runoff including <strong>Clean Water Act Section 208 studies and NURP projects</strong></li>
+            <li>Author of <strong>50+ technical publications</strong> on stormwater quality modeling and maintenance BMP effectiveness</li>
+            <li>Delivered <strong>100+ professional presentations and training workshops</strong> on urban runoff modeling and stormwater management</li>
+            <li>Faculty instructor for the University of Wisconsin short course <strong>“Designing Best Management Practices for Stormwater Quality Improvement”</strong></li>
+            <li>Professional Engineer licensed in Oregon since <strong>1983</strong></li>
+            <li>M.S. Water Resources Engineering, <strong>University of Maryland (1975)</strong></li>
+          </ul>
+
+          <!-- CV download (opens in a new tab) -->
+          <div style="margin-top: 30px; text-align: center;">
+            <a class="button" href="reports/RogerSutherlandVita2025_Final.pdf" target="_blank" rel="noopener noreferrer">
+              Download Roger's CV
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- RECENT NEWS SECTION                    -->
+    <!-- Highlighted external links (3 cards)   -->
+    <!-- ===================================== -->
+    <section class="section section--news" id="recent-news">
+      <div class="container">
+        <h2 class="section-title">Recent News</h2>
+        <p class="section-intro">
+          Selected updates, articles, and related resources.
+        </p>
+
+        <!--
+          Cards are rendered here by JavaScript.
+          Filter rules:
+          - site_section == "links"
+          - highlight == TRUE
+          - limit to 3
+        -->
+        <div class="three-column" id="featuredNewsContainer" aria-label="Recent news">
+          <!-- Cards will be inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- FEATURED PROJECTS SECTION             -->
+    <!-- Horizontal scrolling project cards    -->
+    <!-- ===================================== -->
+    <section class="section section--tight" id="featured-projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-intro">
+          Selected project work in stormwater modeling, pollutant load estimation, and maintenance practice effectiveness.
+        </p>
+
+        <div class="horizontal-scroll" id="featuredProjectsContainer" aria-label="Featured projects (horizontal scroll)">
+          <!-- Cards will be inserted here -->
+        </div>
+
+        <div style="margin-top: 14px;">
+          <a class="button" href="projects.html">View Projects Page</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- PUBLICATIONS SECTION                  -->
+    <!-- Highlighted publications only         -->
+    <!-- ===================================== -->
+    <section class="section" id="publications">
+      <div class="container">
+        <h2 class="section-title">Featured Publications</h2>
+        <p class="section-intro">
+          Selected publications on stormwater quality modeling and pollutant reduction benefits of cleaning practices.
+        </p>
+
+        <div class="horizontal-scroll" id="featuredPublicationsContainer" aria-label="Featured publications (horizontal scroll)">
+          <!-- Cards will be inserted here -->
+        </div>
+
+        <div style="margin-top: 14px;">
+          <a class="button" href="publications.html">View Publications Page</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- PRESENTATIONS SECTION                 -->
+    <!-- Selected presentation cards           -->
+    <!-- ===================================== -->
+    <section class="section" id="presentations">
+      <div class="container">
+        <h2 class="section-title">Featured Presentations</h2>
+        <p class="section-intro">
+          A selection of presentations and workshops focused on stormwater quality and source-control practices.
+        </p>
+
+        <div class="horizontal-scroll" id="featuredPresentationsContainer" aria-label="Featured presentations (horizontal scroll)">
+          <!-- Cards will be inserted here -->
+        </div>
+
+        <div style="margin-top: 14px;">
+          <a class="button" href="presentations.html">View Presentations Page</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================== -->
+  <!-- SITE FOOTER                            -->
+  <!-- ===================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Company + name line -->
+      <p>
+        <strong>Cascade Water Resources</strong> &nbsp;|&nbsp; Roger C. Sutherland, PE
+      </p>
+
+      <!-- Contact icons row -->
+      <div class="footer-icons" aria-label="Contact links">
+        <!--
+          Email + Phone are "copy" actions.
+          - Clicking will copy the text to clipboard.
+          - A small message appears so the user knows it worked.
+        -->
+        <a class="footer-icon js-copy" href="#" data-copy="sutherland.roger1@gmail.com" aria-label="Copy email address">
+          <span class="footer-icon__svg" aria-hidden="true">
+            <!-- Simple envelope icon (inline SVG, no external dependencies) -->
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6.5H20V17.5H4V6.5Z" stroke="currentColor" stroke-width="1.8" />
+              <path d="M4.5 7.2L12 12.6L19.5 7.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+
+        <a class="footer-icon js-copy" href="#" data-copy="5037040522" aria-label="Copy phone number">
+          <span class="footer-icon__svg" aria-hidden="true">
+            <!-- Simple phone icon -->
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.3 5.4L10.5 9.6L9.2 10.9C10.6 13.7 12.9 15.9 15.7 17.3L17 16L21.2 18.2C21.6 18.4 21.8 18.9 21.7 19.4C21.3 21 19.9 22.1 18.2 22.1C10.9 22.1 5 16.2 5 8.9C5 7.2 6.1 5.8 7.7 5.4C8.1 5.3 8.5 5.1 8.3 5.4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+
+        <a class="footer-icon" href="https://www.linkedin.com/in/roger-sutherland-b824b54/" target="_blank" rel="noopener noreferrer" aria-label="Roger Sutherland LinkedIn profile">
+          <span class="footer-icon__svg" aria-hidden="true">
+            <!-- Simple LinkedIn icon -->
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.6 10V18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M6.6 6.6V6.6" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+              <path d="M10.5 18V10.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M10.5 12.6C11.1 11.0 12.3 10.2 13.9 10.2C16.1 10.2 17.4 11.6 17.4 14.3V18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4.8 4.8H19.2V19.2H4.8V4.8Z" stroke="currentColor" stroke-width="1.2" opacity="0.35" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Copy feedback message (hidden until used) -->
+      <p class="footer-copy-note" id="footerCopyNote" aria-live="polite"></p>
+    </div>
+  </footer>
+
+  <!-- Content loader (CSV-driven site content) -->
+  <script src="js/content_loader.js"></script>
+
+  <script>
+    window.CWRContent.load(function () {
+      // Up to 6 highlighted items per section.
+      var projects = window.CWRContent.getBySection("projects").filter(function (i) { return i.highlight === true; }).slice(0, 6);
+      var publications = window.CWRContent.getBySection("publications").filter(function (i) { return i.highlight === true; }).slice(0, 6);
+      var presentations = window.CWRContent.getBySection("presentations").filter(function (i) { return i.highlight === true; }).slice(0, 6);
+
+      // Recent News: 3 highlighted links
+      var news = window.CWRContent.getBySection("links").filter(function (i) { return i.highlight === true; }).slice(0, 3);
+
+      // Render cards.
+      window.CWRContent.renderCards(document.getElementById("featuredProjectsContainer"), projects, { scrollLayout: true, max: 6 });
+      window.CWRContent.renderCards(document.getElementById("featuredPublicationsContainer"), publications, { scrollLayout: true, max: 6 });
+      window.CWRContent.renderCards(document.getElementById("featuredPresentationsContainer"), presentations, { scrollLayout: true, max: 6 });
+
+      // Render Recent News (3 columns)
+      window.CWRContent.renderCards(document.getElementById("featuredNewsContainer"), news, { scrollLayout: false, max: 3 });
+    });
+  </script>
+
+  <!-- Small optional JavaScript (no frameworks) -->
+  <script src="js/navigation.js"></script>
+  <script src="js/copy_to_clipboard.js"></script>
+</body>
+</html>

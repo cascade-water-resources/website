@@ -1,0 +1,311 @@
+/* =====================================
+   components.css
+   Reusable UI pieces: navigation, cards, buttons, scroll containers
+===================================== */
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+.site-header {
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+
+  /* Keep header visible while scrolling */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* Prevent any accidental horizontal scroll in the header */
+  overflow-x: hidden;
+
+  /* Subtle separation when page scrolls */
+  box-shadow: 0 6px 18px rgba(14, 42, 71, 0.18);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+}
+
+/*
+  Main navigation
+  - Always show 4 equal-width columns so it looks good at any screen width.
+*/
+.site-nav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  width: 100%;
+}
+
+.site-nav a {
+  color: var(--color-white);
+  padding: 6px 6px;
+  border-radius: 8px;
+  text-decoration: none;
+  opacity: 0.95;
+
+  /* Make each item feel like a centered tab */
+  text-align: center;
+  white-space: nowrap;
+
+  /* Prevent long link text from causing horizontal overflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Allow the grid items to actually shrink on iOS */
+  min-width: 0;
+
+  /* Prevent iOS from letting you horizontally "pan" the header */
+  touch-action: pan-y;
+
+  /* Slightly smaller base font so 4 columns fit better */
+  font-size: 0.9rem;
+}
+
+.site-nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+}
+
+.site-nav a.is-active {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* A slightly smaller nav font on very small screens (keeps 4 columns readable) */
+@media (max-width: 420px) {
+  .site-nav {
+    gap: 2px;
+  }
+
+  .site-nav a {
+    font-size: 0.78rem;
+    padding: 6px 3px;
+  }
+}
+
+/* =====================================
+   HERO BANNER
+===================================== */
+.hero {
+  background: linear-gradient(135deg, var(--color-dark-blue), #143b63);
+  color: var(--color-white);
+}
+
+.hero h1,
+.hero h2 {
+  color: var(--color-white);
+}
+
+.hero .subtitle {
+  opacity: 0.92;
+  max-width: 70ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+/* =====================================
+   BUTTONS (simple)
+===================================== */
+.button {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--color-steel-blue);
+  color: var(--color-white);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.button:hover {
+  filter: brightness(1.05);
+  text-decoration: none;
+}
+
+.button--ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* =====================================
+   CARDS
+===================================== */
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--color-muted-text);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 120ms ease;
+}
+
+/* =====================================
+   HORIZONTAL SCROLL CONTAINER
+===================================== */
+.horizontal-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 4px 14px;
+  scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: rgba(14, 42, 71, 0.22);
+  border-radius: 100px;
+}
+
+/*
+  Scroll card sizing
+  - We aim for a typical view showing ~3 cards on desktop.
+  - We also keep widths consistent so the dots/scroll position feels predictable.
+*/
+.scroll-card {
+  /* Mobile default: one card nearly fills the screen */
+  flex: 0 0 86%;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 820px) {
+  .scroll-card {
+    /* Desktop: 3 cards visible (accounting for gaps) */
+    flex: 0 0 calc((100% - 32px) / 3);
+  }
+}
+
+/* A small label style for metadata */
+.meta {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--color-muted-text);
+  margin-bottom: 6px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+.site-footer {
+  padding: 26px 0;
+  border-top: 1px solid var(--color-border);
+  background: #eef1f4;
+}
+
+/* Footer layout: stacks on mobile, 2 columns on desktop */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (min-width: 820px) {
+  .footer-grid {
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 22px;
+  }
+}
+
+.footer-contact ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.footer-contact li {
+  margin-bottom: 8px;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--color-muted-text);
+}
+
+/* Footer contact icons (3 columns, icons only) */
+.footer-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  margin-top: 12px;
+  max-width: 240px;
+
+  /* Center the icons row under the footer name line */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+
+  color: var(--color-dark-blue);
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.footer-icon__svg {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-copy-note {
+  margin-top: 10px;
+  min-height: 1.2em; /* reserves a tiny bit of space so the footer doesn't jump */
+  text-align: center;
+  color: var(--color-muted-text);
+  font-size: 0.9rem;
+}
+
+/* =====================================
+   Sticky Header Adjustments
+===================================== */
+/*
+  Mobile header behavior
+  - On small screens, we slide the header out of view when scrolling down.
+  - It re-appears when the user scrolls up.
+
+  The JavaScript toggles: .site-header.is-hidden
+*/
+@media (max-width: 820px) {
+  .site-header {
+    transition: transform 160ms ease;
+    will-change: transform;
+  }
+
+  .site-header.is-hidden {
+    transform: translateY(-110%);
+  }
+}

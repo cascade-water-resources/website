@@ -1,0 +1,180 @@
+/* =====================================
+   home.css
+   Homepage-only styling
+===================================== */
+
+/* =====================================
+   HERO SECTION
+===================================== */
+.hero {
+  /*
+    Viewport-scaled hero (tuned for laptops)
+    --------------------------------------
+    - Slightly less than full height so it doesn't feel oversized.
+    - Uses svh for mobile browser UI stability.
+    - Caps the hero on very tall screens.
+  */
+  min-height: calc(84svh - 64px);
+  max-height: 680px;
+
+  display: flex;
+  align-items: center;
+
+  padding: clamp(34px, 6vh, 70px) 0;
+}
+
+/* Center the hero content so it feels like a clean landing banner */
+.hero .container {
+  text-align: center;
+}
+
+.hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  opacity: 0.90;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+}
+
+.hero h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  opacity: 0.96;
+}
+
+@media (min-width: 820px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+}
+
+/* =====================================
+   HERO LOGO (BLENDED STYLE)
+===================================== */
+/*
+  HERO LOGO WRAPPER
+  - Creates a soft "engineering" glow behind the logo without needing images.
+  - We keep it tasteful: subtle gradients + blur.
+*/
+.hero-logo-wrap {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto 16px;
+  padding: 12px;
+}
+
+.hero-logo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 22px;
+
+  /* Two soft light sources */
+  background:
+    radial-gradient(circle at 18% 35%, rgba(47, 93, 140, 0.35), transparent 55%),
+    radial-gradient(circle at 82% 55%, rgba(255, 255, 255, 0.14), transparent 52%);
+
+  filter: blur(10px);
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+.hero-logo-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+
+  /* Glassy panel */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  pointer-events: none;
+}
+
+/* The image sits above the effect layers */
+.hero-logo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  opacity: 0.92;
+  filter: saturate(0.95) contrast(0.98);
+}
+
+/* Simple hero blurb */
+.hero-blurb {
+  margin: 0 auto;
+  max-width: 72ch;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  opacity: 0.94;
+}
+
+.hero-blurb strong {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 820px) {
+  .hero-logo-wrap {
+    max-width: 820px;
+    margin-bottom: 18px;
+    padding: 14px;
+  }
+
+  .hero-logo {
+    /* Keep image scaling inside the wrapper */
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .hero-blurb {
+    font-size: 1.12rem;
+  }
+}
+
+/* =====================================
+   FEATURED PROJECTS
+===================================== */
+.project-card-title {
+  font-size: 1.05rem;
+}
+
+.placeholder-link {
+  font-size: 0.9rem;
+  color: var(--color-steel-blue);
+}
+
+/* =====================================
+   RECENT NEWS SECTION (darker background)
+===================================== */
+.section--news {
+  background: #0f243a;
+  color: var(--color-white);
+}
+
+.section--news .section-title {
+  color: var(--color-white);
+}
+
+.section--news .section-intro {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Make cards pop a bit on the dark background */
+.section--news .card {
+  border-color: rgba(255, 255, 255, 0.10);
+}

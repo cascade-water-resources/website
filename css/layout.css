@@ -1,0 +1,63 @@
+/* =====================================
+   layout.css
+   Containers, section spacing, and basic layout
+===================================== */
+
+/* The main width constraint for the page */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* Vertical spacing between sections */
+.section {
+  padding: 56px 0;
+}
+
+.section--tight {
+  padding: 36px 0;
+}
+
+.section-title {
+  margin-bottom: 18px;
+}
+
+.section-intro {
+  max-width: 70ch;
+  color: var(--color-muted-text);
+}
+
+/* Simple grid helper (use sparingly in Phase 1) */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (min-width: 820px) {
+  .two-column {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 28px;
+  }
+}
+
+/*
+  Three-column grid helper
+  - Use this for Projects / Publications / Presentations lists
+  - Even width columns
+  - Collapses to 1 column on small screens
+*/
+.three-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (min-width: 820px) {
+  .three-column {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+  }
+}
