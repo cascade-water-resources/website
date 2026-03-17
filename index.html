@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cascade Water Resources | Roger C. Sutherland, PE</title>
 
-  <!-- Font Awesome (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- CSS (kept small and organized by purpose) -->
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -16,9 +14,7 @@
 </head>
 <body>
 
-  <!-- ===================================== -->
-  <!-- SITE HEADER / NAVIGATION              -->
-  <!-- ===================================== -->
+  <!-- ===== HEADER / NAV ===== -->
   <header class="site-header">
     <div class="container">
       <nav class="site-nav" aria-label="Main navigation">
@@ -32,24 +28,13 @@
 
   <main>
 
-    <!-- ===================================== -->
-    <!-- HERO SECTION                          -->
-    <!-- Main landing banner                   -->
-    <!-- ===================================== -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
       <div class="container">
-        <!--
-          Hero logo banner
-          - Styled to blend into the background (not a sharp "sticker" look).
-        -->
         <div class="hero-logo-wrap" aria-hidden="true">
           <img src="assets/logo/cwr_logo.png" alt="Cascade Water Resources" class="hero-logo" />
         </div>
 
-        <!--
-          Simple hero blurb (no repeated site name)
-          - Keep the homepage calm and minimal.
-        -->
         <p class="hero-blurb">
           <strong>Urban stormwater quality modeling and watershed analysis.</strong>
           Cascade Water Resources provides technical expertise in urban runoff modeling, pollutant load estimation, and evaluation
@@ -58,10 +43,7 @@
       </div>
     </section>
 
-    <!-- ===================================== -->
-    <!-- ABOUT SECTION                         -->
-    <!-- Short professional summary            -->
-    <!-- ===================================== -->
+    <!-- ===== ABOUT ===== -->
     <section class="section" id="about">
       <div class="container two-column">
         <div>
@@ -113,7 +95,6 @@
             <li>M.S. Water Resources Engineering, <strong>University of Maryland (1975)</strong></li>
           </ul>
 
-          <!-- CV download (opens in a new tab) -->
           <div style="margin-top: 30px; text-align: center;">
             <a class="button" href="reports/RogerSutherlandVita2025_Final.pdf" target="_blank" rel="noopener noreferrer">
               Download Roger's CV
@@ -123,10 +104,26 @@
       </div>
     </section>
 
-    <!-- ===================================== -->
-    <!-- RECENT NEWS SECTION                    -->
-    <!-- Highlighted external links (3 cards)   -->
-    <!-- ===================================== -->
+    <!-- ===== SIMPTM ===== -->
+    <section class="section section--simptm" id="simptm">
+      <div class="container">
+        <div class="simptm-header">
+          <div>
+            <h2 class="section-title">SIMPTM</h2>
+            <p class="section-intro">
+              The <strong>Simplified Particulate Transport Model (SIMPTM)</strong> is a physically-based framework for estimating
+              urban runoff pollutant loads and evaluating source-control practices such as street sweeping and catch basin cleaning.
+            </p>
+          </div>
+        </div>
+
+        <div class="horizontal-scroll" id="featuredSimptmContainer" aria-label="Featured SIMPTM documents">
+          <!-- Cards inserted by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RECENT NEWS ===== -->
     <section class="section section--news" id="recent-news">
       <div class="container">
         <h2 class="section-title">Recent News</h2>
@@ -134,101 +131,81 @@
           Selected updates, articles, and related resources.
         </p>
 
-        <!--
-          Cards are rendered here by JavaScript.
-          Filter rules:
-          - site_section == "links"
-          - highlight == TRUE
-          - limit to 3
-        -->
         <div class="three-column" id="featuredNewsContainer" aria-label="Recent news">
-          <!-- Cards will be inserted here -->
+          <!-- Cards inserted by JavaScript -->
         </div>
       </div>
     </section>
 
-    <!-- ===================================== -->
-    <!-- FEATURED PROJECTS SECTION             -->
-    <!-- Horizontal scrolling project cards    -->
-    <!-- ===================================== -->
-    <section class="section section--tight" id="featured-projects">
-      <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-intro">
-          Selected project work in stormwater modeling, pollutant load estimation, and maintenance practice effectiveness.
-        </p>
+    <!-- ===== FEATURED WORK (GRADIENT BAND) ===== -->
+    <div class="gradient-band">
 
-        <div class="horizontal-scroll" id="featuredProjectsContainer" aria-label="Featured projects (horizontal scroll)">
-          <!-- Cards will be inserted here -->
+      <!-- ===== PROJECTS ===== -->
+      <section class="section section--tight" id="featured-projects">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-intro">
+            Selected project work in stormwater modeling, pollutant load estimation, and maintenance practice effectiveness.
+          </p>
+
+          <div class="horizontal-scroll" id="featuredProjectsContainer" aria-label="Featured projects">
+            <!-- Cards inserted by JavaScript -->
+          </div>
+
+          <div style="margin-top: 14px;">
+            <a class="button" href="projects.html">View Projects Page</a>
+          </div>
         </div>
+      </section>
 
-        <div style="margin-top: 14px;">
-          <a class="button" href="projects.html">View Projects Page</a>
+      <!-- ===== PUBLICATIONS ===== -->
+      <section class="section" id="publications">
+        <div class="container">
+          <h2 class="section-title">Featured Publications</h2>
+          <p class="section-intro">
+            Selected publications on stormwater quality modeling and pollutant reduction benefits of cleaning practices.
+          </p>
+
+          <div class="horizontal-scroll" id="featuredPublicationsContainer" aria-label="Featured publications">
+            <!-- Cards inserted by JavaScript -->
+          </div>
+
+          <div style="margin-top: 14px;">
+            <a class="button" href="publications.html">View Publications Page</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===================================== -->
-    <!-- PUBLICATIONS SECTION                  -->
-    <!-- Highlighted publications only         -->
-    <!-- ===================================== -->
-    <section class="section" id="publications">
-      <div class="container">
-        <h2 class="section-title">Featured Publications</h2>
-        <p class="section-intro">
-          Selected publications on stormwater quality modeling and pollutant reduction benefits of cleaning practices.
-        </p>
+      <!-- ===== PRESENTATIONS ===== -->
+      <section class="section" id="presentations">
+        <div class="container">
+          <h2 class="section-title">Featured Presentations</h2>
+          <p class="section-intro">
+            A selection of presentations and workshops focused on stormwater quality and source-control practices.
+          </p>
 
-        <div class="horizontal-scroll" id="featuredPublicationsContainer" aria-label="Featured publications (horizontal scroll)">
-          <!-- Cards will be inserted here -->
+          <div class="horizontal-scroll" id="featuredPresentationsContainer" aria-label="Featured presentations">
+            <!-- Cards inserted by JavaScript -->
+          </div>
+
+          <div style="margin-top: 14px;">
+            <a class="button" href="presentations.html">View Presentations Page</a>
+          </div>
         </div>
+      </section>
 
-        <div style="margin-top: 14px;">
-          <a class="button" href="publications.html">View Publications Page</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================== -->
-    <!-- PRESENTATIONS SECTION                 -->
-    <!-- Selected presentation cards           -->
-    <!-- ===================================== -->
-    <section class="section" id="presentations">
-      <div class="container">
-        <h2 class="section-title">Featured Presentations</h2>
-        <p class="section-intro">
-          A selection of presentations and workshops focused on stormwater quality and source-control practices.
-        </p>
-
-        <div class="horizontal-scroll" id="featuredPresentationsContainer" aria-label="Featured presentations (horizontal scroll)">
-          <!-- Cards will be inserted here -->
-        </div>
-
-        <div style="margin-top: 14px;">
-          <a class="button" href="presentations.html">View Presentations Page</a>
-        </div>
-      </div>
-    </section>
+    </div>
 
   </main>
 
-  <!-- ===================================== -->
-  <!-- SITE FOOTER                            -->
-  <!-- ===================================== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container">
-      <!-- Company + name line -->
       <p>
         <strong>Cascade Water Resources</strong> &nbsp;|&nbsp; Roger C. Sutherland, PE
       </p>
 
-      <!-- Contact icons row -->
       <div class="footer-icons" aria-label="Contact links">
-        <!--
-          Email + Phone are "copy" actions.
-          - Clicking will copy the text to clipboard.
-          - A small message appears so the user knows it worked.
-        -->
         <a class="footer-icon js-copy" href="#" data-copy="sutherland.roger1@gmail.com" aria-label="Copy email address">
           <i class="fa-solid fa-envelope" aria-hidden="true"></i>
         </a>
@@ -242,35 +219,28 @@
         </a>
       </div>
 
-      <!-- Copy feedback message (hidden until used) -->
       <p class="footer-copy-note" id="footerCopyNote" aria-live="polite"></p>
     </div>
   </footer>
 
-  <!-- Content loader (CSV-driven site content) -->
   <script src="js/content_loader.js"></script>
 
   <script>
     window.CWRContent.load(function () {
-      // Up to 6 highlighted items per section.
       var projects = window.CWRContent.getBySection("projects").filter(function (i) { return i.highlight === true; }).slice(0, 6);
       var publications = window.CWRContent.getBySection("publications").filter(function (i) { return i.highlight === true; }).slice(0, 6);
       var presentations = window.CWRContent.getBySection("presentations").filter(function (i) { return i.highlight === true; }).slice(0, 6);
-
-      // Recent News: 3 highlighted links
       var news = window.CWRContent.getBySection("links").filter(function (i) { return i.highlight === true; }).slice(0, 3);
+      var simptmDocs = window.CWRContent.getBySection("simptm").filter(function (i) { return i.highlight === true; }).slice(0, 5);
 
-      // Render cards.
       window.CWRContent.renderCards(document.getElementById("featuredProjectsContainer"), projects, { scrollLayout: true, max: 6 });
       window.CWRContent.renderCards(document.getElementById("featuredPublicationsContainer"), publications, { scrollLayout: true, max: 6 });
       window.CWRContent.renderCards(document.getElementById("featuredPresentationsContainer"), presentations, { scrollLayout: true, max: 6 });
-
-      // Render Recent News (3 columns)
       window.CWRContent.renderCards(document.getElementById("featuredNewsContainer"), news, { scrollLayout: false, max: 3 });
+      window.CWRContent.renderCards(document.getElementById("featuredSimptmContainer"), simptmDocs, { scrollLayout: true, max: 5 });
     });
   </script>
 
-  <!-- Small optional JavaScript (no frameworks) -->
   <script src="js/navigation.js"></script>
   <script src="js/copy_to_clipboard.js"></script>
 </body>

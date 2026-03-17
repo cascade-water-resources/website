@@ -20,7 +20,14 @@
   display: flex;
   align-items: center;
 
-  padding: clamp(34px, 6vh, 70px) 0;
+  /*
+    Fixed header offset (no white gap)
+    ---------------------------------
+    The header is fixed, so we add space INSIDE the hero.
+    That keeps the hero background touching the top of the page.
+  */
+  padding-top: calc(clamp(34px, 6vh, 70px) + 74px);
+  padding-bottom: clamp(34px, 6vh, 70px);
 }
 
 /* Center the hero content so it feels like a clean landing banner */
@@ -159,22 +166,92 @@
 }
 
 /* =====================================
-   RECENT NEWS SECTION (darker background)
+   RECENT NEWS SECTION
+   - Match the normal page background (same family as About)
 ===================================== */
 .section--news {
-  background: #0f243a;
-  color: var(--color-white);
+  background: var(--color-off-white);
+  color: var(--color-text);
 }
 
 .section--news .section-title {
-  color: var(--color-white);
+  color: var(--color-dark-blue);
 }
 
 .section--news .section-intro {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--color-muted-text);
 }
 
-/* Make cards pop a bit on the dark background */
 .section--news .card {
-  border-color: rgba(255, 255, 255, 0.10);
+  border-color: var(--color-border);
+}
+
+/* =====================================
+   FEATURED SECTION BAND (ONE GRADIENT)
+   - Wraps Projects + Publications + Presentations
+===================================== */
+.gradient-band {
+  background: linear-gradient(180deg, #0e2a47 0%, #2a6f73 100%);
+}
+
+/* Make the three sections feel like one continuous band */
+.gradient-band .section {
+  padding-top: 46px;
+  padding-bottom: 46px;
+}
+
+/* Keep text readable on the gradient */
+.gradient-band .section-title {
+  color: var(--color-white);
+}
+
+.gradient-band .section-intro {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.gradient-band .button {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* =====================================
+   SIMPTM SPOTLIGHT SECTION
+   Make SIMPTM feel like the main product
+===================================== */
+.section--simptm {
+  /* A professional, slightly lighter band than the hero */
+  background: linear-gradient(135deg, #0e2a47, #2f5d8c);
+  color: var(--color-white);
+}
+
+.section--simptm .section-title {
+  color: var(--color-white);
+}
+
+.section--simptm .section-intro {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.simptm-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 820px) {
+  .simptm-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.simptm-actions {
+  flex: 0 0 auto;
+}
+
+/* Make the SIMPTM cards pop on the gradient background */
+.section--simptm .card {
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
 }

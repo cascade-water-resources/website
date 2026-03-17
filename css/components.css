@@ -10,9 +10,11 @@
   background: var(--color-dark-blue);
   color: var(--color-white);
 
-  /* Keep header visible while scrolling */
-  position: sticky;
+  /* Keep header visible while scrolling (always) */
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
 
   /* Prevent any accidental horizontal scroll in the header */
@@ -176,9 +178,16 @@
   height: 10px;
 }
 
-.horizontal-scroll::-webkit-scrollbar-thumb {
-  background: rgba(14, 42, 71, 0.22);
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.55);
   border-radius: 100px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  /* Lighter gray so it pops against both light and dark backgrounds */
+  background: rgba(220, 226, 232, 0.95);
+  border-radius: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
 }
 
 /*
@@ -291,19 +300,6 @@
    Sticky Header Adjustments
 ===================================== */
 /*
-  Mobile header behavior
-  - On small screens, we slide the header out of view when scrolling down.
-  - It re-appears when the user scrolls up.
-
-  The JavaScript toggles: .site-header.is-hidden
+  The header should stay present as you scroll.
+  We do NOT hide it on mobile.
 */
-@media (max-width: 820px) {
-  .site-header {
-    transition: transform 160ms ease;
-    will-change: transform;
-  }
-
-  .site-header.is-hidden {
-    transform: translateY(-110%);
-  }
-}

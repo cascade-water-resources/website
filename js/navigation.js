@@ -35,40 +35,10 @@
   }
 
   /*
-    Mobile header behavior
-    ----------------------
-    On mobile-sized screens:
-    - Hide the header when the user scrolls DOWN.
-    - Show the header again when the user scrolls UP.
-
-    This keeps the header available, but gives more space while reading.
+    Header visibility
+    -----------------
+    The header should stay present while scrolling.
+    (We previously experimented with hiding it on scroll down for mobile,
+    but this version keeps it always visible.)
   */
-  var header = document.querySelector(".site-header");
-
-  // Only enable this behavior on smaller screens.
-  // (Desktop keeps the sticky header visible.)
-  if (header && window.matchMedia && window.matchMedia("(max-width: 820px)").matches) {
-    var lastScrollY = window.pageYOffset || 0;
-
-    window.addEventListener("scroll", function () {
-      var currentScrollY = window.pageYOffset || 0;
-
-      // Near the top, always show the header.
-      if (currentScrollY < 10) {
-        header.classList.remove("is-hidden");
-        lastScrollY = currentScrollY;
-        return;
-      }
-
-      if (currentScrollY > lastScrollY) {
-        // Scrolling down
-        header.classList.add("is-hidden");
-      } else {
-        // Scrolling up
-        header.classList.remove("is-hidden");
-      }
-
-      lastScrollY = currentScrollY;
-    }, { passive: true });
-  }
 })();
