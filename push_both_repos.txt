@@ -1,0 +1,4 @@
+git add .
+git commit -m "website updates"
+git push origin main
+git push client main
