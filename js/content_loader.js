@@ -3,20 +3,6 @@
   -----------------
   This file loads site content from a CSV metadata file.
 
-  Why this exists:
-  - We want a static website (no React/Vue/Node).
-  - We still want content to be easy to update.
-  - Editing a CSV is simpler than editing HTML.
-
-  IMPORTANT NOTE ABOUT LOCAL FILES:
-  - Most browsers do NOT allow fetch() to read local files (file://) due to security rules.
-  - If you're opening index.html directly, fetch() may fail.
-
-  To keep the site usable either way:
-  1) We try to load the CSV via fetch().
-  2) If fetch fails, we fall back to a tiny embedded copy of the CSV.
-
-  If you later host the site (even on GitHub Pages), fetch() will work.
 */
 
 (function () {

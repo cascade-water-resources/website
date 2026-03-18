@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Presentations | Cascade Water Resources</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -47,11 +49,28 @@
 
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container">
       <p>
         <strong>Cascade Water Resources</strong> &nbsp;|&nbsp; Roger C. Sutherland, PE
       </p>
+
+      <div class="footer-icons" aria-label="Contact links">
+        <a class="footer-icon js-copy" href="#" data-copy="sutherland.roger1@gmail.com" aria-label="Copy email address">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+
+        <a class="footer-icon js-copy" href="#" data-copy="5037040522" aria-label="Copy phone number">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        </a>
+
+        <a class="footer-icon" href="https://www.linkedin.com/in/roger-sutherland-b824b54/" target="_blank" rel="noopener noreferrer" aria-label="Roger Sutherland LinkedIn profile">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <p class="footer-copy-note" id="footerCopyNote" aria-live="polite"></p>
     </div>
   </footer>
 
@@ -66,6 +85,7 @@
   </script>
 
   <script src="js/navigation.js"></script>
+  <script src="js/copy_to_clipboard.js"></script>
 </body>
 </html>
 

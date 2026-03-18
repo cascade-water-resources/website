@@ -1,23 +1,15 @@
 /*
   navigation.js
-  Small optional JavaScript for simple navigation behavior.
-
-  Phase 1 goals:
-  - Keep it minimal
-  - Avoid frameworks
-  - Make code easy to understand for beginners
 */
 
 (function () {
   "use strict";
 
   // Highlight the current page in the navigation.
-  // This helps users know where they are.
   var currentPath = window.location.pathname;
   var fileName = currentPath.split("/").pop();
 
   // When opening files locally, pathname can end with "/".
-  // In that case, treat it as index.html.
   if (fileName === "") {
     fileName = "index.html";
   }
@@ -34,11 +26,5 @@
     }
   }
 
-  /*
-    Header visibility
-    -----------------
-    The header should stay present while scrolling.
-    (We previously experimented with hiding it on scroll down for mobile,
-    but this version keeps it always visible.)
-  */
+
 })();
